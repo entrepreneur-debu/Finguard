@@ -7,9 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# config.py -> finguard/ -> src/ -> project root
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-
-DB_PATH = PROJECT_ROOT / os.getenv("FINGUARD_DB_PATH", "data/finguard.db")
-
+DB_PATH = PROJECT_ROOT / os.getenv("FINGUARD_DB_PATH" , "data/finguard.db")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
